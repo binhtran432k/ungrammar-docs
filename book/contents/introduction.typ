@@ -37,7 +37,7 @@ Specifically, the research will focus on:
 
 - Developing a core #gls("lsp") implementation that provides essential language features
   such as syntax highlighting, code completion, and error checking for Ungrammar.
-- Creating Visual Studio Code extensions to seamlessly integrate the #gls("lsp") into
+- Creating #gls("vscode") extensions to seamlessly integrate the #gls("lsp") into
   both web and desktop development workflows.
 - Designing and implementing an online demonstration playground to showcase the
   capabilities of the #gls("lsp") ecosystem.
@@ -53,7 +53,7 @@ research and development in language-specific tooling.
 
 The primary research object is the development of a
 #gls("lsp") ecosystem for the Ungrammar programming language. This ecosystem
-encompasses a core #gls("lsp") implementation, Visual Studio Code extensions (web and
+encompasses a core #gls("lsp") implementation, #gls("vscode") extensions (web and
 desktop), and an online demonstration playground. The scope of the research
 includes the design, implementation, testing, and evaluation of the #gls("lsp"), its
 integration with development tools, and the exploration of language generation
@@ -67,8 +67,8 @@ components:
 + *Core #gls("lsp") Implementation*: The development of a robust #gls("lsp") implementation that
   provides essential language features such as syntax highlighting, code
   completion, error checking, and refactoring for Ungrammar.
-+ *Visual Studio Code Extensions*: The creation of extensions for both web and
-  desktop versions of Visual Studio Code to seamlessly integrate the #gls("lsp") and
++ *#gls("vscode", mode: "long") Extensions*: The creation of extensions for both web and
+  desktop versions of #gls("vscode") to seamlessly integrate the #gls("lsp") and
   provide a rich development experience.
 + *Online Demonstration Playground*: The development of an interactive platform
   to showcase the capabilities of the #gls("lsp") ecosystem and facilitate user
@@ -169,7 +169,7 @@ This chapter delves into the core concepts of the #gls("lsp"),
 explaining its architecture, communication mechanisms, and key components. It
 also explores the design principles and patterns applied to the #gls("lsp")
 implementation for the Ungrammar language. The chapter will discuss the
-integration of the #gls("lsp") with the Visual Studio Code extension, highlighting the
+integration of the #gls("lsp") with the #gls("vscode") extension, highlighting the
 key considerations and challenges involved.
 
 === Chapter 5: System Implementation

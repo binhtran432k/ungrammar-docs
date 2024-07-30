@@ -1,0 +1,8 @@
+{
+  "plantuml.exportFormat": "svg",
+  "plantuml.exportOutDir": "diagrams/generated",
+  "plantuml.diagramsRoot": "diagrams",
+  "tinymist.formatterMode": "typstyle",
+  "tinymist.preview.refresh": "onSave",
+  "tinymist.preview.partialRendering": true,
+}

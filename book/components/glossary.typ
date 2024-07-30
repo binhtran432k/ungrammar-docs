@@ -23,14 +23,18 @@
   )
 }
 
-#let gls(name) = {
+#let gls(name, mode: none) = {
   let contents = locate(loc => {
     let glossaries = GLOSSARIES.at(loc)
     for table in glossaries.values() {
       if name in table.keys() {
         if table.at(name).len() > 2 {
           link(label(GLS_PREFIX + name))[#table.at(name).at(2)]
-        } else if name not in PRINTED_GLOSSARIES.at(loc) {
+        } else if mode == "long" {
+          link(label(GLS_PREFIX + name))[#table.at(name).at(1)]
+        } else if mode == "short" {
+          link(label(GLS_PREFIX + name))[#table.at(name).at(0)]
+        } else if mode == "full" or name not in PRINTED_GLOSSARIES.at(loc) {
           link(label(GLS_PREFIX + name))[#table.at(name).at(1) (#table.at(name).at(0))]
         } else {
           link(label(GLS_PREFIX + name))[#table.at(name).at(0)]

@@ -21,3 +21,9 @@
 )
 
 #include "contents/introduction.typ"
+#pagebreak(weak: true)
+
+#include "contents/literature-review/index.typ"
+#pagebreak(weak: true)
+
+#bibliography("references.bib")

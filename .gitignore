@@ -1,1 +1,3 @@
 *.pdf
+generated/
+draft.typ

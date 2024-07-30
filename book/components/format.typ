@@ -15,10 +15,10 @@
   logo: none,
   declaration: "",
   acknowledgments: "",
-  glossaries: (abbreviation: (:),),
+  glossaries: (abbreviation: (:)),
   lecturers: (:),
   students: (:),
-  body
+  body,
 ) = {
   set page(
     paper: "a4",
@@ -27,7 +27,7 @@
       right: 2cm,
       bottom: 2cm,
       left: 3cm,
-    )
+    ),
   )
 
   // Set the document's basic properties.
@@ -36,14 +36,16 @@
     size: 12pt,
     // font: "Times_New_Roman",
     font: "New Computer Modern",
-    stretch: 120%, 
+    stretch: 120%,
     lang: "en"
   )
   show math.equation: set text(weight: 400)
   // set math.equation(numbering: "(1.1)") // Currently not directly supported by typst
   set math.equation(numbering: "(1)")
-  set heading(numbering: "1.1")
+  set heading(numbering: "1.1.1.a")
   set par(justify: true)
+
+  show raw.where(block: true): set block(fill: gray.lighten(90%), width: 100%, inset: (x: 1em, y: 1em))
 
   // show heading.where(level: 1): set text(size: 24pt)
   show heading.where(level: 2): set text(size: 18pt)
@@ -64,9 +66,9 @@
     if el != none and el.func() == eq {
       // Override equation references.
       link(el.label)[#numbering(
-        el.numbering,
-        ..counter(eq).at(el.location())
-      )]
+          el.numbering,
+          ..counter(eq).at(el.location()),
+        )]
     } else if el != none and el.func() == hd {
       // Override equation references.
       text(fill: blue.darken(60%))[#it]
@@ -96,7 +98,10 @@
   [
 
     #set heading(numbering: none)
-    #show heading: it => { it; v(1.5em) }
+    #show heading: it => {
+      it
+      v(1.5em)
+    }
 
     #if declaration != "" {
       declaration
@@ -111,20 +116,22 @@
 
   // Table of contents.
   [
-    #show heading: (it) => {
+    #show heading: it => {
       it
       v(1em)
     }
     #let locTitle = [Table of Contents]
     #outline(
       title: locTitle,
-      depth: 3, indent: true
+      depth: 3,
+      indent: true,
     )
     #pagebreak()
 
     #let lofTitle = [List of Figures]
     #outline(
       title: lofTitle,
+      depth: 3,
       target: figure.where(kind: image),
     )
     #{
@@ -136,6 +143,7 @@
     #let lotTitle = [List of Tables]
     #outline(
       title: lotTitle,
+      depth: 3,
       target: figure.where(kind: table),
     )
     #{
@@ -145,7 +153,7 @@
     #pagebreak()
 
     #update_glossaries(glossaries)
-    
+
     #if glossaries.abbreviation.len() > 0 {
       heading(
         outlined: true,
@@ -178,7 +186,7 @@
     #v(1.5in)
     #block[
       #if it.numbering != none [
-        Chapter #counter(heading).display() 
+        Chapter #counter(heading).display()
         #v(0.5cm)
       ]
       #par(first-line-indent: 0pt)[#it.body]
@@ -186,15 +194,15 @@
     #v(1.5cm, weak: true)
   ]
   show heading.where(level: 2): it => [
-      #set text(size: 18pt)
-      #v(1cm, weak: true)
-      #block[
-        #if it.numbering != none [
-          #counter(heading).display() 
-        ]
-        #it.body
+    #set text(size: 18pt)
+    #v(1cm, weak: true)
+    #block[
+      #if it.numbering != none [
+        #counter(heading).display()
       ]
-      #v(1cm, weak: true)
+      #it.body
+    ]
+    #v(1cm, weak: true)
   ]
   show heading.where(level: 2): set text(size: 18pt)
   show heading.where(level: 3): set text(size: 14pt)

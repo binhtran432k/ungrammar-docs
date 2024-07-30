@@ -1,0 +1,77 @@
+@startuml pre-lsp
+left to right direction
+
+entity dev2 as "Dev Tool 2"
+frame java2 as "Java 2" {
+    usecase j2a as "Auto-completion"
+    usecase j2b as "Diagnostics"
+}
+frame dot2 as ".Net 2" {
+    usecase d2a as "Auto-completion"
+    usecase d2b as "Diagnostics"
+}
+entity dev1 as "Dev Tool 1"
+frame java1 as "Java 1" {
+    usecase j1a as "Auto-completion"
+    usecase j1b as "Diagnostics"
+}
+frame dot1 as ".Net 1" {
+    usecase d1a as "Auto-completion"
+    usecase d1b as "Diagnostics"
+}
+
+dev1 -- d1a
+dev1 -- d1b
+j1a -- dev1
+j1b -- dev1
+
+dev2 -- d2a
+dev2 -- d2b
+j2a -- dev2
+j2b -- dev2
+@enduml
+
+@startuml lsp
+left to right direction
+
+entity dev1 as "Dev Tool 1"
+frame java as "Java Language Server" {
+    usecase j1 as "Auto-completion"
+    usecase j2 as "Diagnostics"
+}
+entity dev2 as "Dev Tool 2"
+frame dot as ".Net Language Server" {
+    usecase d1 as "Auto-completion"
+    usecase d2 as "Diagnostics"
+}
+
+dev1 -- j1
+dev1 -- j2
+dev1 -- d1
+dev1 -- d2
+
+j1 -- dev2
+j2 -- dev2
+d1 -- dev2
+d2 -- dev2
+@enduml
+
+@startuml lsp-seq-basis
+
+skinparam sequenceMessageAlign center
+skinparam maxMessageSize 300
+
+entity cli as "Client (IDE/Editor)"
+entity lsp as "Language Server"
+
+cli -> lsp: send a request `initialize(params: InitializeParams)`
+activate lsp
+lsp --> cli: response a `result: InitializeResult`
+deactivate lsp
+
+cli -> lsp: send a notification `initialized(params: InitializedParams)`
+
+lsp -> cli: send a notification `textDocument/didOpen (params: DidOpenTextDocumentParams)`
+lsp -> cli: send a notification `textDocument/publishDiagnostics (params: PublishDiagnosticsParams)`
+
+@enduml

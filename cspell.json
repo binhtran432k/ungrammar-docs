@@ -1,5 +1,23 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": ["UngramLF", "Minh", "Trương", "Tuấn", "Trần", "Bình"]
+  "words": [
+    "Bình",
+    "codebases",
+    "enduml",
+    "inmemory",
+    "lezer",
+    "Minh",
+    "pagebreak",
+    "skinparam",
+    "startuml",
+    "Trần",
+    "Trương",
+    "Tuấn",
+    "ungram",
+    "UngramLF",
+    "Ungrammar",
+    "unregisters",
+    "usecase"
+  ]
 }
