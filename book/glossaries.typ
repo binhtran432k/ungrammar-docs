@@ -2,7 +2,9 @@
   "api": ("API", "Application Programming Interface"),
   "apis": ("APIs", "Application Programming Interfaces"),
   "ast": ("AST", "Abstract Syntax Tree"),
+  "cst": ("CST", "Concrete Syntax Tree"),
   "dom": ("DOM", "Document Object Model"),
+  "dsl": ("DSL", "Domain-Specific Language"),
   "id": ("ID", "Identifier"),
   "ides": ("IDEs", "Integrated Development Environments"),
   "lr": ("LR", "Left-to-right, Rightmost derivation"),
@@ -18,16 +20,22 @@
 #let symbols = (:)
 
 #let glossaries = (
-  "electron": ("Electron", "A framework that enables developers to create native desktop applications using web technologies like HTML, CSS, and JavaScript"),
+  "electron": (
+    "Electron",
+    "A framework that enables developers to create native desktop applications using web technologies like HTML, CSS, and JavaScript",
+  ),
   "git": ("Git", "A distributed version control system used for tracking changes in computer files."),
   "json-rpc": ("JSON-RPC", "A remote procedure call (RPC) protocol encoded in JSON"),
   "meta-lang": ("meta-language", "Language used to describe another language"),
-  "meta-pgm": ("meta-programming", "Programming technique where a program can manipulate or generate other programs as its data"),
+  "meta-pgm": (
+    "meta-programming",
+    "Programming technique where a program can manipulate or generate other programs as its data",
+  ),
   "utf8": ("UTF-8", "A variable-length character encoding standard used for electronic communication"),
 )
 
 #let GLOSSARIES = (
-    abbreviation: abbreviations,
-    symbol: symbols,
-    glossary: glossaries
+  abbreviation: abbreviations,
+  symbol: symbols,
+  glossary: glossaries,
 )

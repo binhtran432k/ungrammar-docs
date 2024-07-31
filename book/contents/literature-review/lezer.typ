@@ -1,6 +1,7 @@
 #import "/book/components/glossary.typ": gls
 
 == The Lezer Parser System
+<sec-lezer>
 
 Manually crafting a robust parser for a programming language is a complex and time-consuming endeavor. To efficiently construct a parser capable of providing syntax analysis for any language, while also supporting #gls("lsp") integration, several key requirements must be met @bib-php-parser:
 

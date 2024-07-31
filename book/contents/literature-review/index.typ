@@ -10,6 +10,6 @@
 
 #include "lezer.typ"
 
-== Ungrammar
+#include "ungrammar.typ"
 
 == Bun
