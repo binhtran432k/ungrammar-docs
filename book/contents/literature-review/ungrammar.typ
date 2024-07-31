@@ -4,7 +4,7 @@
 
 This section explores the suitability of Ungrammar, a language for defining grammars, for implementing a #gls("lsp") for a specific language. Lezer (@sec-lezer), a parser generator, will be used in conjunction with Ungrammar to achieve efficient parsing and analysis.
 
-=== Introduction
+=== Ungrammar in Rust Analyzer
 
 Ungrammar is a #gls("dsl") developed by the Rust Analyzer team to define the syntax structure of the Rust programming language. It serves as a declarative way to specify the grammar rules without delving into the complexities of parser implementation @bib-ungrammar.
 

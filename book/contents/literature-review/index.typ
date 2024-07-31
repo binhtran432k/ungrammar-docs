@@ -12,4 +12,4 @@
 
 #include "ungrammar.typ"
 
-== Bun
+#include "bun.typ"

@@ -2,11 +2,15 @@
   "api": ("API", "Application Programming Interface"),
   "apis": ("APIs", "Application Programming Interfaces"),
   "ast": ("AST", "Abstract Syntax Tree"),
+  "css": ("CSS", "Cascading Style Sheets"),
   "cst": ("CST", "Concrete Syntax Tree"),
   "dom": ("DOM", "Document Object Model"),
   "dsl": ("DSL", "Domain-Specific Language"),
+  "http": ("HTTP", "HyperText Transfer Protocol"),
+  "html": ("HTML", "HyperText Markup Language"),
   "id": ("ID", "Identifier"),
   "ides": ("IDEs", "Integrated Development Environments"),
+  "jsx": ("JSX", "JavaScript XML"),
   "lr": ("LR", "Left-to-right, Rightmost derivation"),
   "lsp": ("LSP", "Language Server Protocol"),
   "nast": ("NAST", "Non-Abstract Syntax Tree"),
@@ -15,6 +19,7 @@
   "uri": ("URI", "Uniform Resource Identifier"),
   "ui": ("UI", "User Interface"),
   "vscode": ("VS Code", "Visual Studio Code"),
+  "xml": ("XML", "Extensible Markup Language"),
 )
 
 #let symbols = (:)
