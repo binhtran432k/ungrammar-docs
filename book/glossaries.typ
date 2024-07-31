@@ -1,10 +1,13 @@
 #let abbreviations = (
   "api": ("API", "Application Programming Interface"),
   "apis": ("APIs", "Application Programming Interfaces"),
+  "ast": ("AST", "Abstract Syntax Tree"),
   "dom": ("DOM", "Document Object Model"),
   "id": ("ID", "Identifier"),
   "ides": ("IDEs", "Integrated Development Environments"),
+  "lr": ("LR", "Left-to-right, Rightmost derivation"),
   "lsp": ("LSP", "Language Server Protocol"),
+  "nast": ("NAST", "Non-Abstract Syntax Tree"),
   "json": ("JSON", "JavaScript Object Notation"),
   "rpc": ("RPC", "Remote Procedure Call"),
   "uri": ("URI", "Uniform Resource Identifier"),

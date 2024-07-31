@@ -8,7 +8,7 @@
 
 #include "monaco-vs-vscode.typ"
 
-== Lezer
+#include "lezer.typ"
 
 == Ungrammar
 
