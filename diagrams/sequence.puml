@@ -1,0 +1,23 @@
+@startuml seq-createupdate
+
+actor Client
+participant "Ungrammar Language Server" as Server
+participant "Ungrammar Language Service" as Service
+participant "Ungrammar Lezer" as Lezer
+
+Client -> Server ++: Send Create/Update Notification
+
+Server -> Service ++: Generate Ungrammar Document
+
+Service -> Lezer ++: Parse/Reparse CST
+Lezer -> Service --: Lezer CST
+
+Service -> Service: Transpile CST to AST
+
+Service -> Server --: Ungrammar Document
+
+Server -> Server: Cache Document
+
+Server -[hidden]-> Client --
+
+@enduml

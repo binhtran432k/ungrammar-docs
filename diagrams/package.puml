@@ -1,0 +1,31 @@
+@startuml pkg-system
+skinparam linetype ortho
+
+package LanguageService as "Ungrammar Language Service" {
+    component "Annotation Service"
+    component "Hover Service"
+    component "Completion Service"
+    component "Code Action Service"
+    component "Format Service"
+    component "Validation Service"
+    component "Highlight Semantic\nService"
+    component "Highlight Related\nService"
+    component "Folding Service"
+    component "Definition Service"
+    component "Reference Service"
+}
+package LanguageServer as "Ungrammar Language Server" {
+    component "JSON-RPC Service"
+}
+package VSCode as "Ungrammar Language Features"
+package Monaco as "Ungrammar Monaco"
+package Playground as "Ungrammar Online\nDemonstration Playground"
+package Lezer as "Ungrammar Lezer"
+
+LanguageService .> Lezer
+LanguageServer ..> LanguageService
+VSCode ..> LanguageServer
+Monaco ...> LanguageService
+Playground .r.> Monaco
+
+@enduml

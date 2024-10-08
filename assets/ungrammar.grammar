@@ -1,0 +1,84 @@
+@precedence { seq @left, label }
+
+@top Grammar { endOfNode Node* }
+
+Node {
+  Identifier
+  "="
+  Rule { atomOrSeqOrAlt }
+  endOfNode
+}
+
+atomOrSeqOrAlt {
+  Alternative | atomOrSeq
+}
+
+atomOrSeq {
+  Sequence | atom
+}
+
+atom {
+  Identifier
+| Token
+| Optional
+| Repetition
+| Group
+| Label
+}
+
+Rule { atom }
+
+Sequence { Rule (!seq Rule)+ }
+
+Alternative { Rule { atomOrSeq } ("|" Rule { atomOrSeq })+ }
+
+Optional { Rule "?" }
+
+Repetition { Rule "*" }
+
+Group { "(" Rule { atomOrSeqOrAlt } (")" | UnclosedGroup { endOfNode }) }
+
+Label {
+  Identifier !label
+  ":"
+  Rule
+}
+
+@external tokens endOfNode from "./tokens.js" { endOfNode }
+
+@local tokens {
+  tokenEnd { "'" }
+  escape { "\\" $['\\] }
+  InvalidEscape { "\\" !['\\] }
+  UnclosedToken { eol }
+  @else tokenContent
+}
+@skip {} {
+  Token { "'" (tokenContent | escape | InvalidEscape)* (tokenEnd | UnclosedToken) }
+}
+
+Identifier { identifier }
+
+@tokens {
+  identifier { $[a-zA-Z_]+ }
+
+  whitespace { $[ \n\t] }
+  WhitespaceR { $[\r] }
+
+  eol { $[\r\n] | @eof }
+  Comment { "//" ![\r\n]* eol }
+
+  "="
+  ":"
+  "?"
+  "|"
+  "*"
+  "("
+  ")"
+}
+
+@skip { whitespace | WhitespaceR | Comment }
+
+@external propSource ungramHighlight from "./highlight.js"
+
+@detectDelim

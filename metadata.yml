@@ -1,0 +1,29 @@
+# Used in cover
+cover_head: |
+  Vietnam National University Ho Chi Minh City
+  Ho Chi Minh city University of Technology
+# Used in cover
+title: MDT-30 - Building a Language Server Protocol Ecosystem
+# Used in cover and acknowledgment
+department: Department of Computer Science and Engineering
+# Used in cover and acknowledgment
+university: Ho Chi Minh city University of Technology
+# Used in cover
+major: Computer Science
+# Used in cover
+subject: Graduation Thesis
+# Used in declaration and acknowledgment
+doc_type: thesis
+# Used in cover and acknowledgment
+supervisors:
+  - Mr. Trương Tuấn Anh
+# Used in cover
+committee: Computer Science Committee 1
+# Used in cover
+reviewer: Mr. Mai Đức Trung
+# Used in cover
+secretary: Mr. Trần Trương Tuấn Phát
+# Used in cover
+students:
+  - name: Trần Đức Bình
+    id: 1811579

@@ -1,3 +1,5 @@
 *.pdf
 generated/
 draft.typ
+*.bkp
+*:Zone.Identifier

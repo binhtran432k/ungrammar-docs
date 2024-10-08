@@ -1,0 +1,74 @@
+@startuml uc-ungram-core
+
+left to right direction
+skinparam linetype ortho
+
+actor u as "Language Provider"
+
+frame "Ungrammar Language Core" {
+  u -- (View Annotations)
+  u -- (Provide Code Actions)
+  u -- (Report Diagnostics)
+  u -- (Go to Definition)
+  u -- (Find All References)
+  u -- (Provide Code Completion)
+  u -- (Expand/Shrink Code Folding)
+  u -- (Highlight Semantic Syntax)
+  u -- (Highlight Related)
+  u -- (Rename Code)
+  u -- (Hover Code)
+  u -- (Format Code)
+  u -- (Provide Quick Navigation)
+  u -- (Update Configuration)
+}
+
+@enduml
+
+@startuml uc-ungram-vscode
+
+left to right direction
+
+actor u as "User"
+actor lp as "Ungrammar Language\nCore"
+
+frame "Ungrammar VS Code Extension" {
+  usecase uc_lsp as "Use LSP Features"
+  u -- uc_lsp
+  uc_lsp -- lp
+  u -- (View Documentation)
+}
+
+@enduml
+
+@startuml uc-ungram-monaco
+
+left to right direction
+
+actor u as "User"
+actor lp as "Ungrammar Language\nCore"
+
+frame "Ungrammar Monaco" {
+  usecase uc_lsp as "Use LSP Features"
+  u -- uc_lsp
+  uc_lsp -- lp
+}
+
+@enduml
+
+@startuml uc-ungram-playground
+
+left to right direction
+
+actor u as "User"
+actor m as "Ungrammar\nMonaco"
+
+frame "Ungrammar Online\nDemonstration Playground" {
+  usecase uc_edit as "Try Code Editor"
+  u -- uc_edit
+  uc_edit -- m
+  u -- (Change Theme)
+  u -- (View Security)
+  u -- (View Documentation)
+}
+
+@enduml

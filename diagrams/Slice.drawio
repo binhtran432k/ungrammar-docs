@@ -1,0 +1,43 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8">
+  <diagram name="Page-1" id="IOSiVDMbwsUrBQRXgT1Y">
+    <mxGraphModel dx="780" dy="496" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tO5mzOuoGSSXJpiMPdzD-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="tO5mzOuoGSSXJpiMPdzD-2" target="tO5mzOuoGSSXJpiMPdzD-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tO5mzOuoGSSXJpiMPdzD-2" value="Ungrammar Language Service" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="430" y="300" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tO5mzOuoGSSXJpiMPdzD-3" value="Ungrammar Lezer" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="590" y="307.5" width="80" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="tO5mzOuoGSSXJpiMPdzD-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="tO5mzOuoGSSXJpiMPdzD-4" target="tO5mzOuoGSSXJpiMPdzD-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tO5mzOuoGSSXJpiMPdzD-4" value="Ungrammar Language Server" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="275" y="300" width="115" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tO5mzOuoGSSXJpiMPdzD-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="tO5mzOuoGSSXJpiMPdzD-5" target="tO5mzOuoGSSXJpiMPdzD-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tO5mzOuoGSSXJpiMPdzD-5" value="Ungrammar Monaco" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="447.5" y="195" width="85" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tO5mzOuoGSSXJpiMPdzD-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="tO5mzOuoGSSXJpiMPdzD-6" target="tO5mzOuoGSSXJpiMPdzD-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tO5mzOuoGSSXJpiMPdzD-6" value="Ungrammar Language Features (VS Code Ext.)" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="268.75" y="190" width="127.5" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tO5mzOuoGSSXJpiMPdzD-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="tO5mzOuoGSSXJpiMPdzD-12" target="tO5mzOuoGSSXJpiMPdzD-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tO5mzOuoGSSXJpiMPdzD-12" value="Ungrammar Playground" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="590" y="197.5" width="80" height="65" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,28 @@
+.
+├── src/
+│   ├── ast/
+│   │   ├── generated.ts
+│   │   ├── ungramDocument.ts
+│   │   └── ungrammar.ungram
+│   ├── services/
+│   │   ├── ungramCodeAction.ts
+│   │   ├── ungramCodeLens.ts
+│   │   ├── ungramCompletion.ts
+│   │   ├── ungramDefinition.ts
+│   │   ├── ungramDocumentSymbols.ts
+│   │   ├── ungramFolding.ts
+│   │   ├── ungramFormat.ts
+│   │   ├── ungramHover.ts
+│   │   ├── ungramReference.ts
+│   │   ├── ungramRename.ts
+│   │   ├── ungramSelection.ts
+│   │   ├── ungramSemanticTokens.ts
+│   │   └── ungramValidation.ts
+│   ├── test/
+│   ├── tsconfig.base.json
+│   ├── tsconfig.cjs.json
+│   ├── tsconfig.json
+│   ├── ungramLanguageService.ts
+│   └── ungramLanguageTypes.ts
+├── README.md
+└── package.json
