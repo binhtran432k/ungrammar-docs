@@ -8,6 +8,10 @@
 
 #include "./monaco-vs-vscode.typ"
 
+#include "./ast.typ"
+
+#include "./cst.typ"
+
 #include "./lezer.typ"
 
 #include "./ungrammar.typ"

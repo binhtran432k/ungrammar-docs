@@ -5,14 +5,25 @@
 
 Manually crafting a robust parser for a programming language is a complex and time-consuming endeavor. To efficiently construct a parser capable of providing syntax analysis for any language, while also supporting #gls("lsp") integration, several key requirements must be met @bib-php-parser:
 
-- *Error Tolerance*: The parser should gracefully handle incomplete or invalid code, producing a partial parse tree and relevant diagnostics.
-- *Performance*: To ensure responsiveness, the parser must be able to parse several megabytes of source code per second, leaving ample room for other language server operations. The parser should exhibit low latency, allowing for real-time feedback and responsiveness.
-- *Memory Efficiency*: Optimized data structures are essential for handling large codebases without excessive memory consumption.
-- *Incremental Parsing*: The ability to update the parse tree incrementally based on code changes is crucial for providing real-time feedback.
-- *Rich AST*: The generated #gls("ast") should accurately represent the source code, including whitespace and comments, to facilitate semantic and transformational operations.
-- *Testability*: A well-defined test suite is essential to ensure parser correctness and reliability.
-- *Maintainability*: The parser's codebase should be clear, well-structured, and easy to understand and modify.
-- *Extensibility*: The parser should provide a flexible #gls("api") for integration with other tools and components.
+- *Error Tolerance*: The parser should gracefully handle incomplete or invalid
+  code, producing a partial parse tree and relevant diagnostics.
+- *Performance*: To ensure responsiveness, the parser must be able to parse
+  several megabytes of source code per second, leaving ample room for other
+  language server operations. The parser should exhibit low latency, allowing
+  for real-time feedback and responsiveness.
+- *Memory Efficiency*: Optimized data structures are essential for handling
+  large codebases without excessive memory consumption.
+- *Incremental Parsing*: The ability to update the parse tree incrementally
+  based on code changes is crucial for providing real-time feedback.
+- *Rich CST*: The generated CST (@sec-cst) should accurately represent the
+  source code, including whitespace and comments, to facilitate semantic and
+  transformational operations.
+- *Testability*: A well-defined test suite is essential to ensure parser
+  correctness and reliability.
+- *Maintainability*: The parser's codebase should be clear, well-structured,
+  and easy to understand and modify.
+- *Extensibility*: The parser should provide a flexible #gls("api") for
+  integration with other tools and components.
 
 To expedite the parser development process while meeting these stringent requirements, we have chosen to leverage a parser generator, specifically Lezer. The following subsections will delve into the details of Lezer and its suitability for our project.
 
